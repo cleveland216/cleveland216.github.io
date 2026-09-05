@@ -31,32 +31,16 @@
             line-height: 1.6;
         }
 
-        /* Hero Section - Fixed Background */
-        .hero-section {
-            background-image: url('./hero-bg.jpeg');
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 60%;
-            min-height: 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 3rem 1rem;
-            position: relative;
-        }
-        
-        /* Overlay to darken background for better text readability */
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(17, 54, 41, 0.6);
-            z-index: 1;
+        /* Results Banner */
+        .results-banner {
+            text-align: center;
+            background: linear-gradient(to right, #9b7a45, #c59b5f, #9b7a45);
+            color: var(--bg-dark-green);
+            padding: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
         }
 
         /* Services Grid (The 4 Cards) */
@@ -116,18 +100,6 @@
             margin-bottom: 1rem;
         }
 
-        /* Results Banner */
-        .results-banner {
-            text-align: center;
-            background: linear-gradient(to right, #9b7a45, #c59b5f, #9b7a45);
-            color: var(--bg-dark-green);
-            padding: 1rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.9rem;
-        }
-
         /* Footer Nav (Socials & Links) */
         .footer-nav {
             background-color: var(--card-bg);
@@ -163,17 +135,13 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero-section {
-                min-height: 250px;
+            .results-banner {
+                font-size: 0.8rem;
             }
         }
     </style>
 </head>
 <body>
-
-    <!-- Hero Section with Fixed Background Image -->
-    <section class="hero-section">
-    </section>
 
     <div class="results-banner">
         Streamline Operations | Increase Profitability | Achieve Growth
