@@ -31,8 +31,9 @@
             line-height: 1.6;
         }
 
-        /* Results Banner - Fixed Background */
+        /* Results Banner - Fixed Background with improved overlay */
         .results-banner {
+            position: relative;
             background-image: url('./markup_546.jpg');
             background-attachment: fixed;
             background-position: center;
@@ -49,12 +50,26 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
         }
 
-        /* Overlay for text readability */
+        /* Dark overlay for readability */
+        .results-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.25));
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Overlay for text readability (on top of the dark layer) */
         .banner-content {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 1.5rem;
+            position: relative;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.35);
+            color: #fff;
+            padding: 1rem 1.5rem;
             border-radius: 8px;
         }
 
@@ -87,8 +102,9 @@
             font-weight: 600;
         }
 
-        /* Parallax / Fixed Image Section */
+        /* Parallax / Fixed Image Section using same banner image */
         .parallax-section {
+            position: relative;
             background-image: url('./markup_546.jpg'); 
             background-attachment: fixed;
             background-position: center;
@@ -101,14 +117,26 @@
             padding: 3rem 1rem;
             border-top: 2px solid var(--gold-accent);
             border-bottom: 2px solid var(--gold-accent);
+            overflow: hidden;
+        }
+        .parallax-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(17, 54, 41, 0.55);
+            z-index: 0;
+            pointer-events: none;
         }
         .quote-box {
-            background-color: rgba(17, 54, 41, 0.9);
+            position: relative;
+            z-index: 1;
+            background-color: rgba(255,255,255,0.04);
             border: 2px solid var(--gold-accent);
             padding: 2rem;
             border-radius: 12px;
             max-width: 600px;
             text-align: center;
+            color: var(--card-bg);
         }
         .quote-box h2 {
             color: var(--gold-accent);
@@ -153,12 +181,18 @@
             .results-banner {
                 min-height: 120px;
                 padding: 1.5rem 1rem;
+                background-attachment: scroll; /* mobile fallback for better performance */
+            }
+            .parallax-section {
+                background-attachment: scroll; /* mobile fallback */
             }
             .banner-content {
-                font-size: 0.8rem;
+                font-size: 0.9rem;
             }
         }
     </style>
+    <!-- Preload the banner image to improve LCP (keeps current jpg file) -->
+    <link rel="preload" href="/markup_546.jpg" as="image">
 </head>
 <body>
 
