@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO Optimized Title -->
     <title>Restaurant POS Setup and Inventory Management Solutions</title>
-    <meta name="description" content="The All-in-One Hub for Hospitality Businesses. We streamline operations, increase profitability, and achieve growth through tailored inventory and modern systems.">
+    <meta name="description" content="The All-in-One Hub for Hospitality Businesses. We streamline operations, increase profitability, and achieve growth through tailored inventory and modern syste[...]
     
     <style>
         /* CSS Variables for Brand Colors */
@@ -31,23 +31,58 @@
             line-height: 1.6;
         }
 
+        /* Hero Section */
+        .hero-section {
+            background-image: url('hero-bg.jpeg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 1rem;
+            position: relative;
+        }
+        
+        /* Overlay to darken background for better text readability */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(17, 54, 41, 0.6);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+        }
+
         /* Header / Nav */
         header {
             text-align: center;
-            padding: 2rem 1rem;
-            background-color: var(--bg-dark-green);
-            border-bottom: 2px solid var(--gold-accent);
+            padding: 0;
         }
         h1 {
             color: var(--gold-accent);
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            letter-spacing: 1px;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
         }
         .tagline {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             color: var(--card-bg);
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
         }
 
         /* Top Action Buttons */
@@ -173,18 +208,34 @@
             color: var(--bg-dark-green);
             border-color: var(--bg-dark-green);
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            .tagline {
+                font-size: 1.1rem;
+            }
+            .hero-section {
+                min-height: 350px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="top-nav">
-            <a href="#pricing" class="btn-small">Pricing</a>
-            <a href="#contact" class="btn-small">Contact</a>
-        </div>
-        <h1>Bytethyme.com</h1>
-        <p class="tagline">The All-in-One Hub for Hospitality Businesses.</p>
-    </header>
+    <!-- Hero Section with Background Image -->
+    <section class="hero-section">
+        <header class="hero-content">
+            <div class="top-nav">
+                <a href="#pricing" class="btn-small">Pricing</a>
+                <a href="#contact" class="btn-small">Contact</a>
+            </div>
+            <h1>Bytethyme.com</h1>
+            <p class="tagline">The All-in-One Hub for Hospitality Businesses.</p>
+        </header>
+    </section>
 
     <div class="results-banner">
         Streamline Operations | Increase Profitability | Achieve Growth
@@ -214,7 +265,7 @@
     <section class="parallax-section">
         <div class="quote-box">
             <h2>Freedom Advice</h2>
-            <p>"True innovation in systems and inventory management is not about reducing costs, but about reclaiming your life. By automating operational complexity, you gain the personal time and freedom to elevate your entire quality of life."</p>
+            <p>"True innovation in systems and inventory management is not about reducing costs, but about reclaiming your life. By automating operational complexity, you gain the personal time a[...]
         </div>
     </section>
 
