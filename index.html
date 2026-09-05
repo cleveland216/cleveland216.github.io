@@ -1,187 +1,243 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="icon" type="image/x-icon" href="C:\Users\jacob\OneDrive\Desktop\Belle Chic.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Optimized Title -->
+    <title>Restaurant POS Setup and Inventory Management Solutions</title>
+    <meta name="description" content="The All-in-One Hub for Hospitality Businesses. We streamline operations, increase profitability, and achieve growth through tailored inventory and modern systems.">
+    
+    <style>
+        /* CSS Variables for Brand Colors */
+        :root {
+            --bg-dark-green: #113629;
+            --card-bg: #fdfbf7;
+            --gold-accent: #c59b5f;
+            --gold-border: #9b7a45;
+            --text-dark: #2c2c2c;
+            --text-light: #fdfbf7;
+        }
 
-<style>
-* {
-  box-sizing: Sborder-box;
-}
+        /* Reset & Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-dark-green);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
 
-body {
-  font-family: Tahoma, Verdana, Geneva, sans-serif;
-  padding: 0px;
-  background: white; /*background white */
-}
-<style>
-    .header {
-        background-color: #55604a;
-        text-align: center;
-        padding: 20px;
-      }
-      Welcome to www.Cleveland-Store.com
-</style>
-<div class="w3-bar w3-black">
-  <a href="#" class="w3-bar-item w3-button">Home</a>
-  <a href="#" class="w3-bar-item w3-button">Link 1</a>
-  <a href="#" class="w3-bar-item w3-button">Link 2</a>
-  <a href="#" class="w3-bar-item w3-button">More</a>
+        /* Header / Nav */
+        header {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: var(--bg-dark-green);
+            border-bottom: 2px solid var(--gold-accent);
+        }
+        h1 {
+            color: var(--gold-accent);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--card-bg);
+            margin-bottom: 1rem;
+        }
 
-<div class="w3-dropdown-hover w3-mobile">
-    <button class="w3-button">Dropdown <i class="fa fa-caret-down"></i></button>
-    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
-      <a href="#" class="w3-bar-item w3-button w3-mobile">Link 1</a>
-      <a href="#" class="w3-bar-item w3-button w3-mobile">Link 2</a>
-      <a href="#" class="w3-bar-item w3-button w3-mobile">Link 3</a>
-    </div>
-  </div>
-</body>
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  text-align: center;
-  background: white
-}
-  
-.header h1 
-{ 
-font-family: Georgia, Cambria, Cochin, Times;
-outline: thick double #4f94a7;
-}
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
+        /* Top Action Buttons */
+        .top-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .btn-small {
+            background: linear-gradient(145deg, #1b4d3c, #113629);
+            border: 2px solid var(--gold-border);
+            color: var(--gold-accent);
+            padding: 0.5rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+        .btn-small:hover {
+            transform: scale(1.05);
+        }
 
+        /* Services Grid (The 4 Cards) */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .card {
+            background-color: var(--card-bg);
+            color: var(--text-dark);
+            border: 3px solid var(--gold-accent);
+            border-radius: 12px;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+        .card h3 {
+            color: #8b2929; /* Deep red accent from your design */
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+        }
+        .card p {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
 
-/* Style the topnav links */
-.topnav a {
-  float: center;
-  display: block;
-  color: #4f94a7;
-  text-align: right;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+        /* Parallax / Fixed Image Section */
+        .parallax-section {
+            /* REPLACE 'your-pattern.jpg' with a lightweight repeating pattern image */
+            background-image: url('your-pattern.jpg'); 
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: repeat;
+            background-size: cover;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 1rem;
+            border-top: 2px solid var(--gold-accent);
+            border-bottom: 2px solid var(--gold-accent);
+        }
+        .quote-box {
+            background-color: rgba(17, 54, 41, 0.9);
+            border: 2px solid var(--gold-accent);
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 600px;
+            text-align: center;
+        }
+        .quote-box h2 {
+            color: var(--gold-accent);
+            margin-bottom: 1rem;
+        }
 
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #4f94a7;
-  color: black;
-}
+        /* Results Banner */
+        .results-banner {
+            text-align: center;
+            background: linear-gradient(to right, #9b7a45, #c59b5f, #9b7a45);
+            color: var(--bg-dark-green);
+            padding: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+        }
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 75%;
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
-}
-
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Add a card effect for articles */
-.card {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-/* Clear floats after the columns */
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
-}
-</style>
+        /* Footer Nav (Socials & Links) */
+        .footer-nav {
+            background-color: var(--card-bg);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        .button-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .btn-large {
+            background: linear-gradient(145deg, #1b4d3c, #113629);
+            border: 3px solid var(--gold-border);
+            color: var(--gold-accent);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            transition: all 0.2s ease;
+        }
+        .btn-large:hover {
+            background: var(--gold-accent);
+            color: var(--bg-dark-green);
+            border-color: var(--bg-dark-green);
+        }
+    </style>
 </head>
 <body>
 
-<div class="header">
-  <h1>  <u>Welcome to www.Cleveland-Store.com</u>    </h1>
-  <p><u>Apparel, Merchandise, Authen</a>
-  <a href="#">Link</a>
-  <a href="#" style="float:right">Link</a>
-</div>
+    <header>
+        <div class="top-nav">
+            <a href="#pricing" class="btn-small">Pricing</a>
+            <a href="#contact" class="btn-small">Contact</a>
+        </div>
+        <h1>Bytethyme.com</h1>
+        <p class="tagline">The All-in-One Hub for Hospitality Businesses.</p>
+    </header>
 
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>Check out our custom shirts, jean jackets, hats, coffee mugs, piñata's and jewelryh2>
-      <h5>title description</h5>
-      <div class="C:\Users\jacob\OneDrive\Desktop\cleveland-store_org\hero-default-mobile.jpg" style="height:200px;"></div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <div class="results-banner">
+        Streamline Operations | Increase Profitability | Achieve Growth
     </div>
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    </div>
-    <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-    </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
-    </div>
-  </div>
-</div>
 
-<div class="footer">
-  <h4>Please follow us on Twitter, Git, and Facebook, and Instagram</h4>
-</div>
+    <!-- Main Content Cards -->
+    <section class="services-container">
+        <div class="card">
+            <h3>Strategic Planning & Business Blueprint</h3>
+            <p>Custom Blueprint<br>Market Analysis<br>Growth Plans</p>
+        </div>
+        <div class="card">
+            <h3>Tailored Inventory & Order Management</h3>
+            <p>Real-Time Tracking<br>Smart Ordering<br>Waste Minimization</p>
+        </div>
+        <div class="card">
+            <h3>Sanitation, Compliance & Quality Checks</h3>
+            <p>Sanitation Management<br>Local Compliance<br>Quality Checks</p>
+        </div>
+        <div class="card">
+            <h3>Integrated Technology & Mobile Solutions</h3>
+            <p>Point of Sale Systems<br>Tablet Ordering<br>Mobile App Interface</p>
+        </div>
+    </section>
+
+    <!-- Parallax Fixed Image Section -->
+    <section class="parallax-section">
+        <div class="quote-box">
+            <h2>Freedom Advice</h2>
+            <p>"True innovation in systems and inventory management is not about reducing costs, but about reclaiming your life. By automating operational complexity, you gain the personal time and freedom to elevate your entire quality of life."</p>
+        </div>
+    </section>
+
+    <!-- Footer Navigation Modules -->
+    <footer class="footer-nav">
+        <div class="button-grid">
+            <a href="#youtube" class="btn-large">YouTube</a>
+            <a href="#facebook" class="btn-large">Facebook</a>
+            <a href="#x" class="btn-large">X (Twitter)</a>
+            <a href="#linkedin" class="btn-large">LinkedIn</a>
+            <a href="#instagram" class="btn-large">Instagram</a>
+            <a href="#kick" class="btn-large">Kick</a>
+            <a href="#discord" class="btn-large">Discord</a>
+        </div>
+        <div class="button-grid" style="margin-top: 2rem;">
+            <a href="#live-chat" class="btn-large">Live Chat</a>
+            <a href="#donations" class="btn-large">Donations</a>
+            <a href="#opportunities" class="btn-large">Opportunities</a>
+            <a href="#connect" class="btn-large">Connect</a>
+            <a href="#about-us" class="btn-large">About Us</a>
+            <a href="#bytethyme" class="btn-large">bytethy.me</a>
+        </div>
+    </footer>
 
 </body>
 </html>
-
-
